@@ -12,9 +12,14 @@
 Колір рамки шапки #ECECEC;
 Колір рамки карток портфоліо #EEEEEE;
 Активна кнопка #188CE8
+Тінь кнопки сервіс rgba(0, 0, 0, 0.15);
 Перша тінь команди rgba(0, 0, 0, 0.12);
 Друга тінь команди rgba(0, 0, 0, 0.14);
 Третя тінь команди rgba(0, 0, 0, 0.2);
+Нижній колір фону послуги #C4C4C4;
+Акцент іконок #FFFFFF;
+Колір іконок #AFB1B8;
+Накладений колір фону rgba(47, 48, 58, 0.4);
 Основний шрифт тексту Roboto, sans-serif;
 Шрифт логотипу Raleway, sans-serif; */
 
@@ -33,9 +38,14 @@
     --header-border-color: #ECECEC;
     --card-border-color: #EEEEEE;
     --accent-btn: #188CE8;
+    --service-btn-shadow: rgba(0, 0, 0, 0.15);
     --first-team-shadow: rgba(0, 0, 0, 0.12);
     --second-team-shadow: rgba(0, 0, 0, 0.14);
     --third-team-shadow: rgba(0, 0, 0, 0.2);
+    --down-bgc-service: #C4C4C4;
+    --accent-color-icon: #FFFFFF;
+    --icon-color: #AFB1B8;
+    --overlay-color: rgba(47, 48, 58, 0.4);
     --pimary-font-text: Roboto, sans-serif;
     --font-logo: Raleway, sans-serif;
 }
@@ -132,6 +142,11 @@ header {border-bottom: 1px solid var(--header-border-color);}
     margin-left: 50px;
 }
 
+.contacts-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Оформлення Лого */
 .logo-dark {color: var(--header-logo-color);}
@@ -187,12 +202,12 @@ header {border-bottom: 1px solid var(--header-border-color);}
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
+
+    background-color: var(--down-bgc-service);;
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise.jpg);
+    background-size: cover;
 }
 
-.service,
-.page-footer {
-    background-color: var(--dark-bg-color);
-}
 
 /* Оформлення кольору тексту Послуга і Підвал */
 .service,
@@ -225,6 +240,8 @@ header {border-bottom: 1px solid var(--header-border-color);}
     padding: 10px 32px;
 
     background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px var(--service-btn-shadow);
+    border: none; 
     border-radius: 4px;
     cursor: pointer;
 }
@@ -255,6 +272,27 @@ header {border-bottom: 1px solid var(--header-border-color);}
 }
 
 .features-item {flex-basis: calc((100% - 90px) / 4);}
+
+.features-item-thumb {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background: var(--light-bg-color);
+    border-radius: 4px;
+}
+
+.antenna-icon,
+.clock-icon,
+.diagram-icon,
+.astronaut-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+
+.feature-title {margin-top: 30px;}
 
 .about-feature {margin-top: 10px;}
 
@@ -291,6 +329,39 @@ header {border-bottom: 1px solid var(--header-border-color);}
     margin-bottom: 10px;
 }
 
+.social-list {
+    display: flex; 
+    column-gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.social-list-link {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--pimary-bg-color);
+    border-radius: 50%;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: var(--accent-color);
+}
+
+.social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+    fill: var(--accent-color-icon);
+}
+
 /* Оформлення Чим ми займаємося */
 
 .work-list {
@@ -323,6 +394,7 @@ header {border-bottom: 1px solid var(--header-border-color);}
 .page-footer {
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: var(--dark-bg-color);
 }
 
 .address {
