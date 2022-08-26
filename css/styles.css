@@ -16,6 +16,12 @@
 Перша тінь команди rgba(0, 0, 0, 0.12);
 Друга тінь команди rgba(0, 0, 0, 0.14);
 Третя тінь команди rgba(0, 0, 0, 0.2);
+Перша тінь кнопок Портфоліо rgba(0, 0, 0, 0.1);
+Друга тінь кнопок Портфоліо rgba(0, 0, 0, 0.08);
+Третя тінь кнопок Портфоліо rgba(0, 0, 0, 0.12);
+Перша тінь карток Портфоліо rgba(0, 0, 0, 0.12);
+Друга тінь карток Портфоліо rgba(0, 0, 0, 0.06);
+Третя тінь карток Портфоліо rgba(0, 0, 0, 0.16);
 Нижній колір фону послуги #C4C4C4;
 Акцент іконок #FFFFFF;
 Колір іконок #AFB1B8;
@@ -45,6 +51,12 @@
     --first-team-shadow: rgba(0, 0, 0, 0.12);
     --second-team-shadow: rgba(0, 0, 0, 0.14);
     --third-team-shadow: rgba(0, 0, 0, 0.2);
+    --first-portfolio-btn-shadow: rgba(0, 0, 0, 0.1);
+    --second-portfolio-btn-shadow: rgba(0, 0, 0, 0.08);
+    --third-portfolio-btn-shadow: rgba(0, 0, 0, 0.12);
+    --first-portfolio-card-shadow: rgba(0, 0, 0, 0.12);
+    --second-portfolio-card-shadow: rgba(0, 0, 0, 0.06);
+    --third-portfolio-card-shadow: rgba(0, 0, 0, 0.16);
     --down-bgc-service: #C4C4C4;
     --accent-color-icon: #FFFFFF;
     --icon-color: #AFB1B8;
@@ -146,9 +158,7 @@ header {border-bottom: 1px solid var(--header-border-color);}
     margin-left: auto;
 }
 
-.contacts-link {
-    margin-right: 30px;
-}
+.contacts-link {margin-right: 30px;}
 
 .contacts-list-link:hover,
 .contacts-list-link:focus {
@@ -222,7 +232,6 @@ header {border-bottom: 1px solid var(--header-border-color);}
     background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(../images/mainpage/servise.jpg);
     background-size: cover;
 }
-
 
 /* Оформлення кольору тексту Послуга і Підвал */
 .service,
@@ -424,7 +433,6 @@ header {border-bottom: 1px solid var(--header-border-color);}
     fill: var(--accent-color);
 }
 
-
 /* Оформлення Кнопки, Команди і Портфоліо */
 .service-btn,
 .team-title,
@@ -440,7 +448,7 @@ header {border-bottom: 1px solid var(--header-border-color);}
 .portfolio-btn {
     font-weight: 500;
 }
-    
+
 /* Підвал */
 .page-footer {
     padding-top: 60px;
@@ -555,6 +563,7 @@ header {border-bottom: 1px solid var(--header-border-color);}
 .portfolio-btn:focus {
     color: var(--primary-light-text-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px var(--first-portfolio-btn-shadow), 0px 1px 2px var(--second-portfolio-btn-shadow), 0px 2px 2px var(--third-portfolio-btn-shadow);
 }
 
 .portfolio-list {
@@ -564,6 +573,10 @@ header {border-bottom: 1px solid var(--header-border-color);}
 }
 
 .portfolio-item {flex-basis: calc((100% - 180px) / 9);}
+
+.portfolio-item:hover {
+    box-shadow: 0px 1px 1px var(--first-portfolio-card-shadow), 0px 4px 4px var(--second-portfolio-card-shadow), 1px 4px 6px var(--third-portfolio-card-shadow);
+}
 
 .portfolio-card-content {
     padding: 20px 24px;
