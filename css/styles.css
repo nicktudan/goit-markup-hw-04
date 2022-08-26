@@ -19,6 +19,9 @@
 Нижній колір фону послуги #C4C4C4;
 Акцент іконок #FFFFFF;
 Колір іконок #AFB1B8;
+Колір іконок футера #FFFFFF;
+Колір рамки клієнтів #AFB1B8;
+Фон іконок футера rgba(255, 255, 255, 0.1);
 Накладений колір фону rgba(47, 48, 58, 0.4);
 Основний шрифт тексту Roboto, sans-serif;
 Шрифт логотипу Raleway, sans-serif; */
@@ -45,6 +48,9 @@
     --down-bgc-service: #C4C4C4;
     --accent-color-icon: #FFFFFF;
     --icon-color: #AFB1B8;
+    --icon-color-footer: #FFFFFF;
+    --client-border: #AFB1B8;
+    --icon-bg-footer: rgba(255, 255, 255, 0.1);
     --overlay-color: rgba(47, 48, 58, 0.4);
     --pimary-font-text: Roboto, sans-serif;
     --font-logo: Raleway, sans-serif;
@@ -135,17 +141,24 @@ header {border-bottom: 1px solid var(--header-border-color);}
 
 .contacts {
     display: flex;
+    align-items: baseline;
+    justify-content: center;
     margin-left: auto;
 }
 
 .contacts-link {
-    margin-left: 50px;
+    margin-right: 30px;
 }
 
-.contacts-list-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contacts-list-link:hover,
+.contacts-list-link:focus {
+    fill: currentColor;
+}
+
+.mail-icon,
+.smartphone-icon {
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 /* Оформлення Лого */
@@ -161,7 +174,8 @@ header {border-bottom: 1px solid var(--header-border-color);}
 }
 
 .logo,
-.service-btn {
+.service-btn, 
+.footer-text {
     font-weight: 700;
 }
 
@@ -175,7 +189,8 @@ header {border-bottom: 1px solid var(--header-border-color);}
 /* Оформлення Навігації і елементів Особливості */
 .site-nav .link,
 .contacts .link,
-.feature-title {
+.feature-title,
+.footer-text {
     font-size: 14px;
     line-height: 1.14;
 }
@@ -374,6 +389,42 @@ header {border-bottom: 1px solid var(--header-border-color);}
 
 .work {padding-top: 0px;}
 
+/* Оформлення Постійні клієнти */
+.client-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.client-item {flex-basis: calc((100% - 150px) / 6);}
+
+.client-card-thumb {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--client-border);
+    border-radius: 4px;
+} 
+
+.client-card-thumb:hover,
+.client-card-thumb:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.logo-icon {
+    width: 106px;
+    height: 60px;
+    fill: var(--icon-color);
+}
+
+.client-link:hover .logo-icon,
+.client-link:focus .logo-icon {
+    fill: var(--accent-color);
+}
+
+
 /* Оформлення Кнопки, Команди і Портфоліо */
 .service-btn,
 .team-title,
@@ -397,6 +448,11 @@ header {border-bottom: 1px solid var(--header-border-color);}
     background-color: var(--dark-bg-color);
 }
 
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
 .address {
     margin-top: 20px;
     font-style: normal;
@@ -406,9 +462,64 @@ header {border-bottom: 1px solid var(--header-border-color);}
     margin-top: 9px;
 }
 
+.address-card-thumb {
+    /* display: flex; */
+    width: 231px;
+    height: 81px;
+}  
+
 .address-list .link {
     color: var(--secondary-light-text-color);
     text-decoration: none;
+}
+
+.footer-social-card-thumb {
+    display: flex;
+    width: 206px;
+    height: 80px;
+    margin-left: 70px;
+} 
+
+.footer-text {
+    color: var(--primary-light-text-color);
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.footer-social-list {
+    display: flex; 
+    column-gap: 10px;
+    justify-content: center;
+    width: 206px;
+    height: 44px;
+    margin-top: 20px;
+} 
+
+.footer-social-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social-list-link {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--icon-bg-footer);
+    border-radius: 50%;
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+    background-color: var(--accent-color);
+}
+
+.footer-social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-color-footer);
 }
 
 /* Оформлення Ховеру і Фокусу */
