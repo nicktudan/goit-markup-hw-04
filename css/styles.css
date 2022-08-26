@@ -471,7 +471,8 @@ header {border-bottom: 1px solid var(--header-border-color);}
 }
 
 .address-card-thumb {
-    /* display: flex; */
+    /* display: flex;
+    align-items: flex-end; */
     width: 231px;
     height: 81px;
 }  
@@ -483,8 +484,11 @@ header {border-bottom: 1px solid var(--header-border-color);}
 
 .footer-social-card-thumb {
     display: flex;
+    align-items: baseline;
+    justify-content: center;
+
     width: 206px;
-    height: 80px;
+    height: 80px; 
     margin-left: 70px;
 } 
 
@@ -498,9 +502,9 @@ header {border-bottom: 1px solid var(--header-border-color);}
     display: flex; 
     column-gap: 10px;
     justify-content: center;
-    width: 206px;
-    height: 44px;
-    margin-top: 20px;
+    /* width: 206px;
+    height: 44px; */
+    margin-top: 20px; 
 } 
 
 .footer-social-list-item {
