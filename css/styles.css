@@ -229,6 +229,9 @@ header {border-bottom: 1px solid var(--header-border-color);}
 
 /* Оформлення фону Послуга і Підвал */
 .service {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -572,10 +575,6 @@ header {border-bottom: 1px solid var(--header-border-color);}
 
 .portfolio-item {flex-basis: calc((100% - 180px) / 9);}
 
-.portfolio-item:hover {
-    box-shadow: 0px 1px 1px var(--first-portfolio-card-shadow), 0px 4px 4px var(--second-portfolio-card-shadow), 1px 4px 6px var(--third-portfolio-card-shadow);
-}
-
 .portfolio-card-content {
     padding: 20px 24px;
     border-right: 1px solid var(--card-border-color); 
@@ -583,7 +582,14 @@ header {border-bottom: 1px solid var(--header-border-color);}
     border-left: 1px solid var(--card-border-color);
 }
 
-.portfolio-link {text-decoration: none;}
+.portfolio-link {
+    text-decoration: none;
+    display: block;
+}
+
+.portfolio-link:hover {
+    box-shadow: 0px 1px 1px var(--first-portfolio-card-shadow), 0px 4px 4px var(--second-portfolio-card-shadow), 1px 4px 6px var(--third-portfolio-card-shadow);
+}
 
 .portfolio-title {
     margin-bottom: 4px;
